@@ -7,6 +7,55 @@
   <version>${BUILD_ID}</version>
   <name>ImageAnalysisProject</name>
   <url>http://maven.apache.org</url>
+
+
+<distributionManagement>  
+ <!-- Publish the versioned releases here -->  
+ <repository>  
+  <id>maven-nexus</id>  
+  <name>Maven nexus</name>  
+  <url>http://localhost:8081/nexus/content/repositories/releases</url>  
+ </repository>  
+  
+ <!-- Publish the versioned releases here -->  
+ <snapshotRepository>  
+  <id>maven-nexus</id>  
+  <name>maven nexus</name>  
+  <url>http://localhost:8081/nexus/content/repositories/snapshots</url>  
+ </snapshotRepository>  
+</distributionManagement>  
+  
+<!-- download artifacts from this repo -->  
+<repositories>  
+ <repository>  
+  <id>maven-nexus</id>  
+  <name>mavennexus</name>  
+  <url>http://localhost:8081/nexus/content/groups/public</url>  
+  <releases>  
+   <enabled>true</enabled>  
+  </releases>  
+  
+  <snapshots>  
+   <enabled>true</enabled>  
+  </snapshots>  
+ </repository>  
+</repositories>  
+  
+<!-- download plugins from this repo -->  
+<pluginRepositories>  
+ <pluginRepository>  
+  <id>maven-nexus</id>  
+  <name>mavennexus</name>  
+  <url>http://localhost:8081/nexus/content/groups/public</url>  
+  <releases>  
+   <enabled>true</enabled>  
+  </releases>  
+  <snapshots>  
+   <enabled>true</enabled>  
+  </snapshots>  
+ </pluginRepository>  
+</pluginRepositories> 
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
