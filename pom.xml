@@ -4,7 +4,7 @@
   <groupId>com.myer.ImageRender</groupId>
   <artifactId>ImageAnalysisProject</artifactId>
   <packaging>jar</packaging>
-  <version>${BUILD_DATE_FORMATTED}</version>
+  <version>${BUILD_ID}</version>
   <name>ImageAnalysisProject</name>
   <url>http://maven.apache.org</url>
   <dependencies>
